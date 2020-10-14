@@ -36,7 +36,7 @@ namespace NVector{
             else{
                 Capasity *= 2;
                 T *newdata = new T[Capasity];
-                std::memcpy(newdata, Data, Capasity * sizeof(T));
+                std::memcpy(newdata, Data, Capasity/2 * sizeof(T));
                 delete [] Data;
                 Data = newdata;
                 Data[Size-1] = elem;
